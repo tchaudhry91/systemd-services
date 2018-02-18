@@ -1,0 +1,13 @@
+[Unit]
+Description=Prometheus Server
+After=network.target
+
+[Service]
+Type=simple
+User=tchaudhry
+WorkingDirectory=/home/tchaudhry/monitoring/prometheus
+ExecStart=/usr/bin/docker-compose up
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
