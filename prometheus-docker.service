@@ -6,7 +6,6 @@ After=network.target
 Type=simple
 User=tchaudhry
 WorkingDirectory=/home/tchaudhry/monitoring/prometheus
-ExecStartPre=/bin/bash clean-up.sh
 ExecStart=/usr/bin/docker-compose up
 Restart=always
 
